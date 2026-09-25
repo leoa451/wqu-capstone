@@ -9,6 +9,6 @@ This repository hosts Jupyter notebooks, markdown files, and related documents f
 
 ## Getting started
 
-1. Add project notebooks to `/home/runner/work/wqu-capstone/wqu-capstone/notebooks`.
-2. Add supporting markdown files and other documents to `/home/runner/work/wqu-capstone/wqu-capstone/documents`.
+1. Add project notebooks to `notebooks/`.
+2. Add supporting markdown files and other documents to `documents/`.
 3. Keep large generated artifacts and notebook checkpoint files out of version control using the existing `.gitignore`.
