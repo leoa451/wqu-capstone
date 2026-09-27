@@ -1,0 +1,13 @@
+{
+  "name": "wqu-capstone-results-site",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "scripts": {
+    "build:site": "tsc -p site/tsconfig.json",
+    "check:site": "tsc --noEmit -p site/tsconfig.json"
+  },
+  "devDependencies": {
+    "typescript": "5.9.3"
+  }
+}

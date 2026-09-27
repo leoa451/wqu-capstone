@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="color-scheme" content="light">
+    <title>Portfolio research results | Group 17859</title>
+    <meta name="description" content="Published historical results for the MScFE 690 portfolio allocation research project.">
+    <link rel="icon" href="./favicon.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="https://1.www.s81c.com/common/carbon/plex/sans.css">
+    <link rel="stylesheet" href="https://1.www.s81c.com/common/carbon/web-components/version/v2.17.0/themes.css">
+    <link rel="stylesheet" href="./styles.css">
+    <script type="module" src="https://1.www.s81c.com/common/carbon/web-components/version/v2.17.0/button.min.js"></script>
+    <script type="module" src="https://1.www.s81c.com/common/carbon/web-components/version/v2.17.0/tag.min.js"></script>
+    <script type="module" src="https://1.www.s81c.com/common/carbon/web-components/version/v2.17.0/tile.min.js"></script>
+    <script type="module" src="./app.js"></script>
+  </head>
+  <body class="cds-theme-zone-g10">
+    <a class="skip-link" href="#main">Skip to results</a>
+    <header class="topbar">
+      <div class="topbar-inner">
+        <div class="brand"><span class="brand-mark" aria-hidden="true"></span><span>MScFE 690 <span class="brand-muted">/ Group 17859</span></span></div>
+        <a class="top-link" href="https://github.com/leoa451/wqu-capstone">View repository <span aria-hidden="true">↗</span></a>
+      </div>
+    </header>
+
+    <main id="main">
+      <section class="hero" aria-labelledby="page-title">
+        <div class="container">
+          <p class="eyebrow">CAPSTONE RESEARCH · RESULTS VIEW</p>
+          <h1 id="page-title">Monthly portfolio allocation</h1>
+          <p class="lede">A public view of saved research results. This page displays reported runs; it does not train models or place trades.</p>
+          <div class="hero-actions">
+            <cds-tag id="publication-status" type="blue">Checking results</cds-tag>
+            <cds-button id="refresh-button" kind="tertiary" size="sm">Refresh data</cds-button>
+          </div>
+        </div>
+      </section>
+
+      <section class="container results-section" aria-labelledby="results-heading">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">PUBLISHED RUNS</p>
+            <h2 id="results-heading">Evaluation snapshot</h2>
+          </div>
+          <div class="run-picker" id="run-picker" hidden>
+            <label for="run-select">Select run</label>
+            <select id="run-select"></select>
+          </div>
+        </div>
+
+        <p id="status-message" class="status-message" role="status" aria-live="polite">Loading the published results file.</p>
+
+        <div class="metrics" aria-label="Selected run summary">
+          <cds-tile class="metric-tile"><span class="metric-label">Model annualized return</span><span id="return-value" class="metric-value">—</span></cds-tile>
+          <cds-tile class="metric-tile"><span class="metric-label">Model Sharpe ratio</span><span id="sharpe-value" class="metric-value">—</span></cds-tile>
+          <cds-tile class="metric-tile"><span class="metric-label">Constraint violations</span><span id="violation-value" class="metric-value">—</span></cds-tile>
+        </div>
+
+        <div class="table-panel">
+          <div class="table-heading">
+            <h3>Portfolio comparison</h3>
+            <p id="run-context">No evaluation run selected.</p>
+          </div>
+          <div class="table-scroll">
+            <table>
+              <thead><tr><th scope="col">Portfolio</th><th scope="col">Annualized return</th><th scope="col">Annualized volatility</th><th scope="col">Sharpe ratio</th><th scope="col">Max drawdown</th><th scope="col">Turnover</th></tr></thead>
+              <tbody id="comparison-rows"><tr><td colspan="6" class="empty-cell">No published portfolio results yet.</td></tr></tbody>
+            </table>
+          </div>
+        </div>
+
+        <div class="notes">
+          <div><h3>About these results</h3><p>All figures shown here must come from a saved run in the published results file. No example or generated-market-data performance is presented as a finding.</p></div>
+          <div><h3>Research boundary</h3><p>Historical backtests do not guarantee future performance. This prototype is for research review, not investment advice or trade execution.</p></div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer"><div class="container"><span>MScFE 690 Capstone · Group 17859</span><span>Interface uses the <a href="https://carbondesignsystem.com/">IBM Carbon Design System</a>.</span></div></footer>
+  </body>
+</html>
